@@ -11,6 +11,8 @@
     "clean": "del ./build/*",
     "build": "npm run clean && tsc -p tsconfig.build.json",
     "patch": "npm version patch && npm run build",
+    "lint": "eslint src --ext .ts",
+    "format": "eslint src --ext .ts --fix && prettier --write \"./src/**/*.{js,ts}\"",
     "test": "jest --watch --no-cache"
   },
   "keywords": [],
